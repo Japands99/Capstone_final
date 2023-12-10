@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Renting Mechanical Equipments</title>
+    <!---Css Link-->
+    <link rel="stylesheet" href="style.css">
+    <!--Box icon-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="full-page">
+        <video class="video-background" autoplay loop muted>
+            <source src="img/lake 2 (2).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    <header>
+    <!--Header-->
+     <a href="#" class="logo"><img src="img/Logo 1.png" alt=""></a>
+
+     <div class="bx bx-menu" id="menu-icon"></div>
+     <div class="navbar">
+        
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rent">Rental</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#review">Reviews</a></li>
+        
+    </div>
+    
+    
+        <div class="dropdown">
+            <button class="dropbtn">Profile &#9660;</button>
+            <div class="dropdown-content">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="setting.html">Settings</a></li>
+                <a href="#">Notifications</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    </header>
+<!--Home-->
+<section class="home" id="home">
+    <div class="text">
+        <h1><span>Looking</span>for<br>Equipments to Rent </h1>
+        <p>In Glan Commercial Bulan Sorsogon</p>
+    </div>
+</section>
+<!--Rent-->
+<section class="rent" id="rent">
+    <div class="heading">
+        <span>How its work</span>
+        <h1>Rent with easy way</h1>
+    </div>
+    
+    <div class="rent-container">
+    <div class="box">
+        <i class='bx bx-map'></i>
+        <h2>Choose a Location</h2>
+        <p>Start by choosing your preferred rental location on our website.</p>
+    </div>
+
+    <div class="box">
+        <i class='bx bx-calendar-check'></i>
+        <h2>Pick-up Date</h2>
+        <p>Select the date you need the equipment.</p>
+    </div>
+
+    <div class="box">
+        <i class='bx bx-calendar-star'></i>
+        <h2>Book a Equipment</h2>
+        <p>Confirm your reservation </p>
+    </div>
+</div>
+</section>
+<!--Services-->
+<section class="services" id="services">
+    <div class="heading">
+        <span>Best services</span>
+        <h1>Explore Our best Product</h1>
+    </div>
+   <div class="services-container">
+    <div class="box">
+        <div class="box-img">   
+        <img src="img/1.png" alt="">
+        </div>
+        <h3> Bugger Cement Mixer</h3>
+        <h2>8 Hours 1500<span></span></h2>
+        <button data-modal-target="popupModal1" class="btn showModal">Rent Now</button>
+    </div>
+
+    <div class="box">
+        <div class="box-img"> 
+         <img src="img/2.png" alt="">
+        </div>
+        <h3>Concrete Vibrator</h3>
+        <h2><span>1000 Per Hours</span></h2>
+        <button data-modal-target="popupModal2" class="btn showModal">Rent Now</button>
+    </div>
+
+    <div class="box">
+        <div class="box-img">        
+            <img src="img/3.png" alt="">
+        </div>
+        <h3>Portal Lip</h3>
+        <h2>2000 8 Hours<span></span></h2>
+        <button data-modal-target="popupModal3" class="btn showModal">Rent Now</button>
+    </div>
+
+    <div class="box">
+        <div class="box-img">
+            <img src="img/4.png" alt="">
+        </div>
+        <h3>Compactor</h3>
+        <h2>1000 Per Hour<span></span></h2>
+        <button data-modal-target="popupModal4" class="btn showModal">Rent Now</button>
+   </div>
+
+   <div class="box">
+    <div class="box-img">
+        <img src="img/4.png" alt="">
+    </div>
+   <h3>Loader</h3>
+   <h2>1000 Per Hour<span></span></h2>
+   <button data-modal-target="popupModal5" class="btn showModal">Rent Now</button>
+</div>
+
+<div class="box">
+   <div class="box-img">        
+       <img src="img/3.png" alt="">
+   </div>
+   <h3>Bakhue</h3>
+   <h2>2700 Per Hour<span></span></h2>
+   <button data-modal-target="popupModal6" class="btn showModal">Rent Now</button>
+</div>
+
+<div class="box">
+   <div class="box-img">        
+       <img src="img/3.png" alt="">
+   </div>
+   <h3>Damn Truck</h3>
+   <h2><span>Kilometer Base</span></h2>
+   <button data-modal-target="popupModal7" class="btn showModal">Rent Now</button>
+</div>
+
+<div class="box">
+   <div class="box-img">        
+       <img src="img/3.png" alt="">
+   </div>
+   <h3>Water Pump</h3>
+   <h2> <span>Kilometer Base</span></h2>
+   <button data-modal-target="popupModal8" class="btn showModal">Rent Now</button>
+</div>
+
+<div class="box">
+   <div class="box-img">        
+       <img src="img/3.png" alt="">
+   </div>
+   <h3>Stamp Folding</h3>
+   <h2> <span>Per Peace</span></h2>
+   <button data-modal-target="popupModal9" class="btn showModal">Rent Now</button>
+</div>
+
+<div class="form-container">
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <form action="" method="post">
+                <div class="input-box">
+                    <span>Location</span>
+                    <input type="search" name="location" placeholder="Enter Location" required>
+                </div>
+
+                <div class="input-box">
+                    <span>PhoneNumber</span>
+                    <input type="text" name="phone_number" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="pick_up_date" required>
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="return_date" required>
+                </div>
+                <input type="submit" class="btn" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    // Get the modal and button elements
+var modal = document.getElementById("popupModal");
+var showModalButtons = document.querySelectorAll('.showModal');
+var closeModalButton = document.getElementById("closeModal");
+
+// Loop through each button and add click event listeners
+showModalButtons.forEach(function(button) {
+    button.onclick = function() {
+        modal.style.display = "block";
+    };
+});
+
+// Close the modal when the close button is clicked
+closeModalButton.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Close the modal if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if the browser supports notifications
+      if (!('Notification' in window)) {
+        console.error('This browser does not support desktop notification');
+        return;
+      }
+  
+      // Request permission for notifications
+      Notification.requestPermission().then(function (permission) {
+        if (permission !== 'granted') {
+          console.warn('Notification permission denied');
+        }
+      });
+  
+      // Function to show a simple notification
+      function showNotification() {
+        if (Notification.permission === 'granted') {
+          var notification = new Notification('Hello!', {
+            body: 'Please Check Your SMS For More Info.',
+            icon: '..img/sms.png' // Replace with the path to your notification icon
+          });
+  
+          // Close the notification after 3 seconds
+          setTimeout(function () {
+            notification.close();
+          }, 3000);
+        }
+      }
+  
+      // Attach the showNotification function to the button click event
+      var submitButton = document.getElementById('submitButton');
+      submitButton.addEventListener('click', showNotification);
+    });
+  </script>
+
+</section>
+<!--About-->
+<section class="about" id="about">
+    <div class="heading">
+        <span>About Us</span>
+        <h1>Glan Commercial is Auto, Fishing, Agricultural and, Construction Tools and Supply shop.</h1>
+    </div>
+    <div class="about-contaner">
+        <div class="about-img">
+        <img src="img/Glan Logo.jpg" alt="">
+        </div>  
+        <div class="about-text">
+            <span>About Us</span>
+            <p>Glan commercial</p>
+            <a href="#" class="btn" id="learnMoreBtn">Learn More</a>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+const learnMoreBtn = document.getElementById("learnMoreBtn");
+const popupContainer = document.createElement("div");
+popupContainer.className = "popup-container";
+
+const popupContent = document.createElement("div");
+popupContent.className = "popup-content";
+popupContent.innerHTML = `
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h2>About Glan Commercial</h2>
+    <p>Additional information about Glan Commercial goes here.</p>
+`;
+
+popupContainer.appendChild(popupContent);
+document.body.appendChild(popupContainer);
+
+learnMoreBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    popupContainer.style.display = "flex";
+});
+});
+
+function closePopup() {
+const popupContainer = document.querySelector(".popup-container");
+popupContainer.style.display = "none";
+}
+</script>
+
+<!--Reviews-->
+<section class="review" id="review">
+    <div class="heading">
+      <h1>Product Reviews</h1>
+      <div class="review-form">
+        <h2>Add a Review</h2>
+        <form id="review-form">
+          <textarea name="review" id="review-input" rows="4" cols="50" placeholder="Write your review here"></textarea>
+          <button type="submit" id="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="review-list">
+        <h2>Reviews</h2>
+        <ul id="review-list-ul"></ul>
+      </div>
+    </div>
+  </section>  
+<!--NewsLetter-->
+<section class="newsletter">
+    
+</section>
+
+<div class="copyright">
+    <p>&#169; glancommercial All Right reserve</p>
+<div class="social">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+    <a href="#"><i class='bx bxl-tiktok'></i></a>
+</div>
+</div>
+
+<!--Scroll reveal-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--Js Link-->
+    <script src="main.js"></script>
+</body>
+</html>
+

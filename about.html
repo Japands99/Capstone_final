@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="homepage.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <video class="video-background" autoplay loop muted>
+            <source src="img/Saturn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    <div class="full-page">
+        <div class="navbar">
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='about.html'>About Us</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                    <li><a href='login_user.html'>Log In</a></li>
+            </nav>
+        </div>
+        <section>
+            <div class="container">
+                <div class="about-section">
+                    <div class="title">
+                        <h1>About Us</h1>
+                    </div>
+                    <div class="content">
+                        <h2>Welcome to Glan Commercial</h2>
+                        <p>
+                            At Glan Commercial, we are your partners in finding the ideal commercial space for your business. With a deep understanding of the real estate market and a commitment to your success, we simplify the process of securing the perfect space for your needs.
+                        </p>
+                        <p>
+                            Whether you're an ambitious startup looking for your first office, an expanding enterprise in need of a larger retail footprint, or an established corporation seeking flexible warehouse solutions, we have a diverse portfolio of properties to meet your requirements.
+                        </p>
+                        <p>
+                            Our experienced team of real estate professionals is dedicated to providing you with expert guidance, personalized service, and transparency throughout the leasing process. We believe in building lasting partnerships with our clients and ensuring your long-term success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

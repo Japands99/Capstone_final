@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="full-page">
+        <video class="video-background" autoplay loop muted>
+            <source src="img/Saturn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <div class="alert-box"></div>
+
+    <div class="form">
+        <form id="register-form" method="post">
+            <h1 class="heading">Register</h1>
+            <input type="text" name="firstname" placeholder="First Name" autocomplete="off" class="firstname" required>
+            <input type="text" name="lastname" placeholder="Last Name" autocomplete="off" class="lastname" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="off" class="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" class="password" required>
+            <input type="date" name="birthday" class="input-field" placeholder="Birthday" required>
+            <select name="gender" class="input-field" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button class="submit-btn" type="submit">Register</button>
+        </form>
+        <a href="login_user.html" class="link">Already have an account? Log in here</a>
+    </div>
+    
+    <script src="server.js"></script>
+</body>
+</html>

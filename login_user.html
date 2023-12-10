@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="full-page">
+        <video class="video-background" autoplay loop muted>
+            <source src="img/Saturn.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <div class="alert-box"></div>
+
+    <div class="form"> 
+        <form id="login-form" method="post">
+            <h1 class="heading">Login</h1>
+            <input type="email" name="email" placeholder="Email" autocomplete="off" class="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" class="password" required>
+            <button class="submit-btn" type="submit">Log In</button>
+            <a href="register_user.html" class="link">Don't have an account? Register one</a>
+        </form>
+    </div> 
+    </div>
+</body>
+<script>
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+    
+      // Make a POST request to the login endpoint
+      const response = await fetch('http://localhost:5500/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+    
+      const result = await response.json();
+    
+      // Check if login was successful
+      if (response.ok) {
+        // Redirect to the main page
+        window.location.href = 'http://localhost:5500/main';
+      } else {
+        // Handle login failure (display an error message, etc.)
+        console.error('Login failed:', result.message);
+      }
+    }
+    </script>
+<script src="server.js"></script>
+</html>

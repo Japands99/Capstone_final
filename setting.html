@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setting</title>
+
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <form id="profile-form">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+    
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" placeholder="A brief description about yourself" rows="4"></textarea>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+    
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" name="skills" placeholder="Your Skills, separated by commas">
+    
+            <button type="button" onclick="saveProfile()">Save Profile</button>
+        </form>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #FFFB73;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    
+<script>
+    function saveProfile() {
+        const fullName = document.getElementById('fullName').value;
+        const bio = document.getElementById('bio').value;
+        const email = document.getElementById('email').value;
+        const skills = document.getElementById('skills').value;
+
+        // You can add more fields as needed
+
+        // TODO: Save the profile data (e.g., send it to a server or store in local storage)
+
+        alert('Profile saved successfully!');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #profile-container {
+      width: 300px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #profile-pic {
+      border-radius: 50%;
+      max-width: 150px;
+      margin: 10px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    #fileInput {
+      display: none;
+    }
+    #editProfileBtn {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    #editProfileBtn:hover {
+      background-color: #0056b3;
+    }
+    #user-info {
+      text-align: left;
+      margin-top: 20px;
+      color: #333333;
+    }
+    #user-info p {
+      margin: 8px 0;
+    }
+    h2 {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<div id="profile-container">
+  <h2>User Profile</h2>
+  <img id="profile-pic" src="placeholder.jpg" alt="Profile Picture">
+  <label for="fileInput" id="editProfileBtn">Edit</label>
+  <input type="file" id="fileInput" accept="image/*">
+  <div id="user-info"></div>
+
+  <!-- Simulating a logged-in state -->
+  <script>
+    // Replace this with actual user data from your server
+    let userData = {
+      id: 1,
+      name: "",
+      email: "",
+      gender: "",
+      birthday: "", 
+      profilePic: ""
+    };
+
+    function updateUserProfile(newData) {
+      console.log("Updating user profile on the server:", newData);
+      userData = { ...userData, ...newData };
+      showUserProfile();
+    }
+
+    function showUserProfile() {
+      const userInfoContainer = document.getElementById('user-info');
+      userInfoContainer.innerHTML = `
+        <p><strong>Name:</strong> ${userData.name}</p>
+        <p><strong>Email:</strong> ${userData.email}</p>
+        <p><strong>Gender:</strong> ${userData.gender}</p>
+        <p><strong>Birthday:</strong> ${userData.birthday}</p>
+      `;
+
+      const profilePic = document.getElementById('profile-pic');
+      profilePic.src = userData.profilePic;
+    }
+
+    document.getElementById('fileInput').addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const newProfilePic = e.target.result;
+          updateUserProfile({ profilePic: newProfilePic });
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    document.getElementById('editProfileBtn').addEventListener('click', function () {
+      document.getElementById('fileInput').click();
+    });
+
+    showUserProfile();
+  </script>
+</div>
+
+</body>
+</html>
